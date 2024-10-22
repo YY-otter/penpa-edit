@@ -291,7 +291,7 @@ function set_font_style(ctx, size, type, ccolor = "none") {
     ctx.textAlign = "center";
     ctx.textBaseline = "alphabetic";
     ctx.setLineDash([]);
-    var fontfamily = "MS PGothic,Helvetica,Arial";
+    var fontfamily = "'Noto Sans JP', Helvetica, Arial";
     ctx.font = size + "px " + fontfamily;
     switch (type) {
         case 0:
