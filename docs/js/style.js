@@ -291,8 +291,26 @@ function set_font_style(ctx, size, type, ccolor = "none") {
     ctx.textAlign = "center";
     ctx.textBaseline = "alphabetic";
     ctx.setLineDash([]);
+
+    /**
+     * 20241024 Y.Y.
+    **/
+    let priority_font = "";
+    const nb_font_elements = document.getElementsByName("nb_font");
+    for(let i=0; i<nb_font_elements.length; i++){
+        if (nb_font_elements[i].checked) {
+            priority_font = document.querySelector('label[for="' + nb_font_elements[i].id + '"]').textContent;
+            break;
+	}
+    }
+    
     var fontfamily = "'MS PGothic', 'Noto Sans JP', Helvetica, Arial";
-    ctx.font = size + "px " + fontfamily;
+    ctx.font = size + "px '" + priority_font + "', " + fontfamily;
+    //console.log(ctx.font);
+    /**
+     * 20241024 Y.Y.
+    **/
+	
     switch (type) {
         case 0:
             ctx.fillStyle = Color.TRANSPARENTWHITE;

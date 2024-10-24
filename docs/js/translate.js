@@ -352,6 +352,7 @@ function trans() {
         "nb_quality1_lb": ["高", "High"],
         "nb_quality2_lb": ["低", "Low"],
         "nb_type_lb": ["拡張子：", "File type:"],
+        "nb_font_lb": ["フォント：", "Font:"],
         "saveimagename_lb": ["ファイル名：", "File name:"],
         "savetexttitle": ["回転・移動", "Rotate / Move"],
         "rt1_lb": ["　回転：", "Rotate:"],
