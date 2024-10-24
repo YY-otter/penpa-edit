@@ -302,7 +302,7 @@ function set_font_style(ctx, size, type, ccolor = "none") {
     }
     
     var fontfamily = "'MS PGothic', 'Noto Sans JP', Helvetica, Arial";
-    ctx.font = size + "px '" + priority_font + "' " + fontfamily;
+    ctx.font = size + "px '" + priority_font + "', " + fontfamily;
     console.log(ctx.font);
 	
     switch (type) {
