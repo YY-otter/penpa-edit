@@ -1760,7 +1760,6 @@ function DeleteCheck() {
 
 function saveimage() {
     document.getElementById("modal-image").style.display = 'block';
-    document.getElementById("nb_type3").checked = true; // SVG のラジオボタンをチェックする
 }
 
 function saveimage_download() {
@@ -1769,13 +1768,7 @@ function saveimage_download() {
     if (!filename) {
         filename = "my_puzzle";
     }
-
-    // SVG をデフォルトの選択に変更
-    if (document.getElementById("nb_type3").checked || !document.getElementById("nb_type1").checked && !document.getElementById("nb_type2").checked) {
-        if (filename.slice(-4) != ".svg") {
-            filename += ".svg";
-        }
-    } else if (document.getElementById("nb_type1").checked) {
+    if (document.getElementById("nb_type1").checked) {
         if (filename.slice(-4) != ".png") {
             filename += ".png";
         }
@@ -1783,8 +1776,11 @@ function saveimage_download() {
         if (filename.slice(-4) != ".jpg") {
             filename += ".jpg";
         }
+    } else if (document.getElementById("nb_type3").checked) {
+        if (filename.slice(-4) != ".svg") {
+            filename += ".svg";
+        }
     }
-    
     var str_sym = "\\/:*?\"<>|";
     var valid_name = 1;
     for (var i = 0; i < filename.length; i++) {
