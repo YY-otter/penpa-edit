@@ -1637,7 +1637,7 @@ onload = function() {
                 break;
                 //saveimage
             case "nb_margin1_lb":
-                document.getElementById("nb_margin1").checked = true;
+                document.getElementById("nb_margin1").checked = false;
                 e.preventDefault();
                 break;
             case "nb_margin2_lb":
