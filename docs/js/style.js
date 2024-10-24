@@ -296,9 +296,9 @@ function set_font_style(ctx, size, type, ccolor = "none") {
     const nb_font_elements = document.getElementsByName("nb_font");
     for(let i=0; i<nb_font_elements.length; i++){
         if (nb_font_elements[i].checked) {
-            priority_font = nb_font_elements[i].textContent;
+            priority_font = nb_font_elements[i].value;
             break;
-		}
+	}
     }
     console.log(priority_font);
     
