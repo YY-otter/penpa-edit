@@ -303,7 +303,7 @@ function set_font_style(ctx, size, type, ccolor = "none") {
     console.log(priority_font);
     
     var fontfamily = "'MS PGothic', 'Noto Sans JP', Helvetica, Arial";
-    ctx.font = size + "px " + priority_font + " " + fontfamily;
+    ctx.font = size + "px '" + priority_font + "' " + fontfamily;
     switch (type) {
         case 0:
             ctx.fillStyle = Color.TRANSPARENTWHITE;
