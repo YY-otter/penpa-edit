@@ -291,7 +291,10 @@ function set_font_style(ctx, size, type, ccolor = "none") {
     ctx.textAlign = "center";
     ctx.textBaseline = "alphabetic";
     ctx.setLineDash([]);
-    
+
+    /**
+     * 20241024 Y.Y.
+    **/
     let priority_font = "";
     const nb_font_elements = document.getElementsByName("nb_font");
     for(let i=0; i<nb_font_elements.length; i++){
@@ -303,7 +306,10 @@ function set_font_style(ctx, size, type, ccolor = "none") {
     
     var fontfamily = "'MS PGothic', 'Noto Sans JP', Helvetica, Arial";
     ctx.font = size + "px '" + priority_font + "', " + fontfamily;
-    console.log(ctx.font);
+    //console.log(ctx.font);
+    /**
+     * 20241024 Y.Y.
+    **/
 	
     switch (type) {
         case 0:
