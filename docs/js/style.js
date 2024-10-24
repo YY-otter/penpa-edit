@@ -291,8 +291,19 @@ function set_font_style(ctx, size, type, ccolor = "none") {
     ctx.textAlign = "center";
     ctx.textBaseline = "alphabetic";
     ctx.setLineDash([]);
+    
+    let priority_font = "";
+    const nb_font_elements = document.getElementsByName("nb_font");
+    for(let i=0; i<nb_font_elements.length; i++){
+        if (nb_font_elements[i].checked) {
+            priority_font = nb_font_elements[i].textContent;
+            break;
+		}
+    }
+    console.log(priority_font);
+    
     var fontfamily = "'MS PGothic', 'Noto Sans JP', Helvetica, Arial";
-    ctx.font = size + "px " + fontfamily;
+    ctx.font = size + "px " + priority_font + " " + fontfamily;
     switch (type) {
         case 0:
             ctx.fillStyle = Color.TRANSPARENTWHITE;
