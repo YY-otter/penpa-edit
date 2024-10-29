@@ -1726,7 +1726,7 @@ class Puzzle_truncated_square extends Puzzle {
     draw_linesym(ctx, num, x, y) {
         var r = 0.32;
         ctx.setLineDash([]);
-        ctx.lineCap = "butt";
+        ctx.lineCap = "round";
         ctx.fillStyle = Color.TRANSPARENTBLACK;
         ctx.strokeStyle = Color.BLACK;
         ctx.lineWidth = 3;
