@@ -1692,7 +1692,7 @@ class Puzzle_square extends Puzzle {
             }
             if (true) { //(this[pu].numberS[i][0].length <= 2 ){
                 if (this.point[i]) {
-                    set_font_style(this.ctx, 1.32 * this.size.toString(10), this[pu].numberS[i][1]);
+                    set_font_style(this.ctx, (0.32*1.2) * this.size.toString(10), this[pu].numberS[i][1]);
                     this.ctx.textAlign = "center";
                     this.ctx.text(this[pu].numberS[i][0], this.point[i].x, this.point[i].y + 0.03 * this.size, this.size * 0.48);
                 }
