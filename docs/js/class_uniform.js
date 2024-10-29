@@ -1171,7 +1171,7 @@ class Puzzle_truncated_square extends Puzzle {
                     break;
                 case "5": //small
                     this.draw_numbercircle(pu, i, p_x, p_y, 0.17);
-                    set_font_style(this.ctx, 1.25 * this.size.toString(10), this[pu].number[i][1]);
+                    set_font_style(this.ctx, 0.25 * this.size.toString(10), this[pu].number[i][1]);
                     this.ctx.text(this[pu].number[i][0], p_x, p_y + 0.02 * this.size, this.size * 0.8);
                     break;
                 case "6": //medium
