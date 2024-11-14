@@ -1812,7 +1812,7 @@ onload = function() {
                         let gif_ctx = gif_c.getContext("2d");
 
                         let fontSize = 16;
-                        let fontLineSize = fontSize;
+                        let fontLineSize = fontSize * 0.9;
                         gif_ctx.font = "bold " + fontSize + "px sans-serif";
                         let puzzleTitleLines = splitTextLines(gif_ctx, $('#puzzletitle').text(), main_c.offsetWidth);
                         let gif_vertical_offset = puzzleTitleLines.length * fontLineSize
